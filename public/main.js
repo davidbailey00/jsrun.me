@@ -1,7 +1,19 @@
-if (location.hash !== '') {
-  const html = decodeURIComponent(location.hash.substring(1));
+function render_html(iframe, hash) {
+  iframe.src = 'data:text/html,' + encodeURIComponent(hash);
+}
+
+if (location.search !== '' && location.hash !== '') {
+  const hash = decodeURIComponent(location.hash.substring(1));
   const iframe = document.createElement('iframe');
-  iframe.src = 'data:text/html,' + encodeURI(html);
+
+  switch (location.search) {
+    case '?html':
+      render_html(iframe, hash);
+      break;
+    default:
+      window.alert('invalid type. try jsrun.me/?html#<h1>hello world</h1>');
+  }
+
   document.body.appendChild(iframe);
 }
 
