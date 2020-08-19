@@ -1,6 +1,7 @@
-// version: 3
+// version: 6
 
 async function initialCache() {
+  await caches.delete('jsrun.me');
   const cache = await caches.open('jsrun.me');
   await cache.addAll(['/', '/main.js', '/style.css']);
 }
