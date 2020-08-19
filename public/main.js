@@ -34,8 +34,6 @@ function render_dweet(iframe, hash) {
       <style>
         body {
           margin: 0;
-          display: flex;
-          min-height: 100vh;
         }
         div {
           width: 568px;
