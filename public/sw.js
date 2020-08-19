@@ -1,4 +1,4 @@
-// version: 1
+// version: 2
 
 async function initialCache() {
   const cache = await caches.open('jsrun.me');

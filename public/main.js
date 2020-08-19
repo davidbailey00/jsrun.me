@@ -1,7 +1,7 @@
 function createDocument(js) {
   const html = String.raw;
   const doc = html`<html>
-    <body>
+    <body style="margin: 0; display: flex">
       <script>
         eval(unescape('${escape(js)}'));
       </script>
