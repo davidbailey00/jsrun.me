@@ -11,7 +11,7 @@ if (location.search !== '' && location.hash !== '') {
       render_html(iframe, hash);
       break;
     default:
-      window.alert('invalid type. try jsrun.me/?html#<h1>hello world</h1>');
+      window.alert('invalid url. try jsrun.me/?html#<h1>hello world</h1>');
   }
 
   document.body.appendChild(iframe);
