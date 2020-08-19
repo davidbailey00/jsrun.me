@@ -23,3 +23,7 @@ if (location.hash !== '') {
 window.addEventListener('hashchange', () => {
   window.location.reload();
 });
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
