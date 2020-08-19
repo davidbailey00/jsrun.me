@@ -34,11 +34,17 @@ function render_dweet(iframe, hash) {
       <style>
         body {
           margin: 0;
+          max-width: 640px;
         }
-        div {
-          width: 568px;
-          height: 320px;
+        .outer {
           overflow: hidden;
+          padding-top: 56.25%; /* 16:9 */
+          position: relative;
+        }
+        .inner {
+          position: absolute;
+          top: 0;
+          width: 100%;
         }
         canvas {
           width: 100%;
@@ -47,8 +53,10 @@ function render_dweet(iframe, hash) {
       </style>
     </head>
     <body>
-      <div>
-        <canvas id="c" width="1920" height="1080"></canvas>
+      <div class="outer">
+        <div class="inner">
+          <canvas id="c" width="1920" height="1080"></canvas>
+        </div>
       </div>
       <script>
         const hash = unescape('${escape(hash)}');

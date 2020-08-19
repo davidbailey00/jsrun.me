@@ -1,4 +1,4 @@
-// version: 11
+// version: 12
 
 async function initialCache() {
   await caches.delete('jsrun.me');
