@@ -1,9 +1,9 @@
-// version: 6
+// version: 7
 
 async function initialCache() {
   await caches.delete('jsrun.me');
   const cache = await caches.open('jsrun.me');
-  await cache.addAll(['/', '/main.js', '/style.css']);
+  await cache.addAll(['/html', '/main.js', '/style.css']);
 }
 
 async function respond(request) {
