@@ -19,3 +19,7 @@ if (location.hash !== '') {
   iframe.src = 'data:text/html,' + encodeURI(doc);
   document.body.appendChild(iframe);
 }
+
+window.addEventListener('hashchange', () => {
+  window.location.reload();
+});
